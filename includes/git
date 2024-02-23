@@ -10,7 +10,16 @@ alias gc="git commit -m"
 alias gca="git commit --amend -m"
 alias gp="git push"
 
-# Checkout the default branch
+function checkout() {
+    selected=`git branch --format='%(refname:short)' | fzf`
+ 
+    if [[ -z $selected ]]; then
+        return 1
+    fi
+ 
+    git checkout $selected
+}
+
 function g~() {
     git checkout $(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
 }
@@ -54,4 +63,13 @@ function gt() {
 function ge(){
     mkdir -p "$1"
     git archive master | tar -x -C "$1"
+}
+
+# checkout to the result of a git branch grep
+function grck(){
+    git branch | grep "$1" -m 1 | tr -d '\n' | xargs git checkout
+}
+
+function gbs(){
+    git branch -a | grep "$1"
 }
