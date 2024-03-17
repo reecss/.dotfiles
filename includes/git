@@ -2,7 +2,7 @@ alias g="git"
 alias gs="git status"
 alias ga="git add --all ."
 alias g-="git checkout -"
-alias gb="git checkout -b"
+alias gb="git branch"
 alias gf="git fetch"
 alias gpl="git pull"
 alias gl="git log --oneline --all --graph --decorate"
@@ -70,6 +70,7 @@ function grck(){
     git branch | grep "$1" -m 1 | tr -d '\n' | xargs git checkout
 }
 
+# search git branches
 function gbs(){
     git branch -a | grep "$1"
 }
