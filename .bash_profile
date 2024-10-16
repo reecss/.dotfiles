@@ -3,3 +3,5 @@ for file in `find ~/.dotfiles/includes`; do
 done
 
 unset file
+
+EDITOR=nvim
