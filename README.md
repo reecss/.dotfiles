@@ -1,3 +1,7 @@
+Totally stole these from [@aaronlord](https://github.com/aaronlord)
+
+---
+
 > As an engineer, there is a short list of tools that you must be rabid about. Rabid. Foaming at the mouth crazy.
 >
 > -- <cite>[Michael Lopp][1]</cite>
