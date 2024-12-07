@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repo="git@github.com:aaronlord/.dotfiles.git"
+repo="git@github.com:reecss/.dotfiles.git"
 dir="$HOME/.dotfiles"
 
 set -u
